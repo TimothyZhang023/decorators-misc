@@ -45,6 +45,18 @@
         </service>
 
         <service
+            android:name=".TransparentIconDecorator"
+            android:directBootAware="true"
+            android:permission="com.oasisfeng.nevo.permission.BIND_DECORATOR_SERVICE"
+            android:process="com.oasisfeng.nevo.decorators"
+            android:label="@string/decorator_trans_icon_title"
+            android:description="@string/decorator_trans_icon_description">
+            <intent-filter android:priority="-20">
+                <action android:name="com.oasisfeng.nevo.Decorator" />
+            </intent-filter>
+        </service>
+
+        <service
             android:name=".NoStickyDecorator"
             android:directBootAware="true"
             android:permission="com.oasisfeng.nevo.permission.BIND_DECORATOR_SERVICE"
